@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TheOne</title>
+	<style type="text/css">
+		.nav ul {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-columns: repeat(8,1fr);
+			padding: 10px;
+			list-style: none;
+			
+
+		}
+		.nav ul li {
+			border: 1px solid;
+			padding: 10px;
+			text-align: center;
+			cursor: pointer;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+
+    <script type="text/javascript">
+        var app=angular.module("app",[]);
+        app.controller("emp",['$scope',function($scope){
+            $scope.iconi='clear-day';
+    }])
+	</script>
+</head>
+<body>
+	<span ng-app="app">
+		<span ng-controller="emp">
+
+	<header>News Feed</header>
+
+
+	<div class="nav">
+		<ul>
+			<li>Top Headlines</li>
+			<li>Business</li>
+			<li>Entertainment</li>
+			<li>General</li>
+			<li>Health</li>
+			<li>Science</li>
+			<li>Sports</li>
+			<li>Technology</li>
+		</ul>
+	</div>
+
+
+
+		</span>
+	</span>
+</body>
+</html>
