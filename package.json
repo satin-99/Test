@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/satin-99/Test/issues"
   },
-  "homepage": "https://github.com/satin-99/Test#readme"
+  "homepage": "https://github.com/satin-99/Test#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "handlebars": "^4.0.12"
+  }
 }
