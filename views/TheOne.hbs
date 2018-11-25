@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TheOne</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+	<title>The_World_Now</title>
 
 	<style type="text/css">
 		.nav ul {
@@ -34,12 +27,28 @@
 			border: 0px;
 			cursor: pointer;
 		}
+		#container {
+			margin: 5%;
+
+		}
+		#left {
+			width: 70%;
+		}
+
+		img {
+			border: 2px solid;
+			border-radius: 100%;
+			float: right;
+			margin-top: -13%;
+		}
+		#box {
+			border: 5px solid;
+			border-radius: 30%;
+			padding: 5%;
+		}
 
 	</style>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
 
-	</script> -->
 </head>
 <body>
 
@@ -138,16 +147,21 @@
 
 	<p>This is it </p>
 
+<div id="container">
 	  {{# each jobs}}
+		<div id="box">
+			<div id="left">
 	  <div>{{this.title}}</div>
 	  <div>{{this.description}}</div>
 	  <div><a href="{{this.url}}">Read More</a></div>
-		<div><img src="{{this.urlToImage}}" height="100px" width="100px"></div>
 		<div>{{this.content}}</div>
+	</div>
+		<div id="image"><img src="{{this.urlToImage}}" height="100px" width="100px"></div>
+	</div>
 		************************************************
 		<br><br>
 	  {{/each}}
-
+</div>
 
 
 </body>
