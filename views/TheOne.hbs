@@ -2,30 +2,53 @@
 <html>
 <head>
 	<title>The_World_Now</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style type="text/css">
+	* {
+			box-sizing: border-box;
+		}
 		.nav ul {
 			display: grid;
-			grid-gap: 20px;
+			grid-gap: 0px;
 			grid-template-columns: repeat(8,1fr);
-			padding: 10px;
+			padding: 0px;
 			list-style: none;
 			text-align: center;
+			border: 1px solid aqua;
+		}
+		ul {
+			margin: 0px;
 		}
 		.nav ul li {
 			text-align: center;
-			padding: 10px;
+			padding: 15px;
 			text-align: center;
 			cursor: pointer;
+			color: aqua;
+			font-size: 1.2em;
+		}
+		.nav {
+			background-color: black;
+		}
+		.nav ul form:hover {
+			background-color: aqua;
+			color: black;
+			font-weight: bolder;
+		}
+		.nav ul li:hover {
+			color: black;
+			font-weight: bolder;
 		}
 		button {
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 			width:80%;
 			height:80%;
 			background-color: transparent;
 			outline: none;
 			border: 0px;
 			cursor: pointer;
+
 		}
 		#container {
 			margin: 5%;
@@ -34,10 +57,12 @@
 			width: 70%;
 		}
 		img {
-			border: 2px solid;
-			border-radius: 100%;
-			float: right;
-			margin-top: -13%;
+
+			width: 50%;
+			height: 50%;
+		}
+		#image{
+			text-align: center;
 		}
 		#box {
 			border: 0px solid;
@@ -146,7 +171,7 @@
 	<div class="nav">
 		<ul>
 			<form action="/" method="get">
-				<button><li>Top Headlines</li></button></form>
+				<button><li>Headlines</li></button></form>
 
 			<form action="/business" method="get">
 			<button><li>Business</li></button></form>
@@ -181,14 +206,14 @@
 	  {{# each jobs}}
 		<div id="box">
 			<div id="left">
+	<div id="image"><img src="{{this.urlToImage}}"></div>
 	  <div>{{this.title}}</div>
 	  <div>{{this.description}}</div>
 	  <div><a href="{{this.url}}">Read More</a></div>
 		<div>{{this.content}}</div>
 	</div>
-		<div id="image"><img src="{{this.urlToImage}}" height="100px" width="100px"></div>
+
 	</div>
-		************************************************
 		<br><br>
 	  {{/each}}
 </div>

@@ -17,6 +17,9 @@ app.set('view engine', ".hbs");
 app.get('/', function(req,res) {
 
   c = req.query.country;
+  if(c==undefined) {
+    c='IN'
+  }
   console.log(c);
     let url = `https://newsapi.org/v2/top-headlines?country=${c}&apiKey=541b0fef5bc14758b3a93b5970586323`
     axios({
