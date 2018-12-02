@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>The_World_Now</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 
 	<style type="text/css">
 	* {
@@ -48,22 +48,22 @@
 			outline: none;
 			border: 0px;
 			cursor: pointer;
-
 		}
 		#container {
 			margin: 5%;
 		}
-		#left {
+		/* #left {
 			width: 70%;
-		}
+		} */
 		img {
-
-			width: 50%;
+			width: 80%;
 			height: 50%;
+			border-radius: 10%;
 		}
-		#image{
+		#image {
 			text-align: center;
 		}
+
 		#box {
 			border: 0px solid;
 			border-radius: 30%;
@@ -98,6 +98,17 @@
 			background-color: #ffff;
 		}
 
+		@media only screen and (max-width: 768px) {
+			.nav ul {
+				display: grid;
+				grid-gap: 0px;
+				grid-template-columns: repeat(3,1fr);
+				padding: 0px;
+				list-style: none;
+				text-align: center;
+				border: 1px solid aqua;
+			}
+		}
 	</style>
 
 	<script>
@@ -106,6 +117,7 @@
 
 </head>
 <body>
+
 				<header>
 					<span ><form action="/" method="GET">
 						 <select name="country" onchange="this.form.submit()" id="sel">
@@ -203,21 +215,25 @@
 	</form>
 
 <div id="container">
+
+
 	  {{# each jobs}}
-		<div id="box">
-			<div id="left">
-	<div id="image"><img src="{{this.urlToImage}}"></div>
+<div id="box">
+<div id="left">
+	<div id="image"><img src="{{this.urlToImage}}" onerror="this.style.display='none'"></div>
+
 	  <div>{{this.title}}</div>
 	  <div>{{this.description}}</div>
 	  <div><a href="{{this.url}}">Read More</a></div>
+
 		<div>{{this.content}}</div>
 	</div>
 
 	</div>
-		<br><br>
 	  {{/each}}
 </div>
 
-
+</div>
+</div>
 </body>
 </html>
