@@ -68,7 +68,7 @@
 		/* #left {
 			width: 70%;
 		} */
-		img {
+		#image img {
 			width: 80%;
 			height: 50%;
 			border-radius: 10%;
@@ -78,6 +78,9 @@
 		}
 		#left {
 			padding: 2%;
+			border-radius: 10%;
+			background-color: #ffff;
+			margin-top: 20px;
 		}
 		#box {
 			border: 0px solid;
@@ -97,25 +100,42 @@
 			background-color: #EFF0F1;
 			margin: 0px;
 		}
-		hr {
+		/* hr {
 			color: #EFF0F1;
 			border: 15px solid;
-		}
+		} */
 		#sel {
-			float: left;
+			float: right;
 			background-color: black;
 			color: aqua;
 			appearance: none;
 			line-height: 20;
 			outline: 0;
 			margin-top: 20px;
-			margin-left: 10px;
+			margin-right: 10px;
 			font-size: 0.3em;
 			width: 20px;
 		}
 		#container {
-			background-color: #ffff;
+
 		}
+
+input.rounded {
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 20px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+}
+input.rounded:focus {
+	border-color: #339933;
+}
 
 		@media only screen and (max-width: 768px) {
 
@@ -234,12 +254,12 @@
 			</ul>
 			</div>
 
-
+<div style="text-align:center;margin-top: 10px;">
 	<form action="/search" method="get">
-		<input type="text" name="name">
-		<button>Search</button>
+		<input type="text" name="name" style="width:30%;text-align: center" class="rounded">
+		<button><img src="search.svg" style="width:20px;height:23px;"></button>
 	</form>
-
+</div>
 <div id="container">
 
 
@@ -255,7 +275,7 @@
 
 		<div>{{this.content}}</div>
 	</div>
-		<hr>
+		
 	</div>
 
 	</div>
