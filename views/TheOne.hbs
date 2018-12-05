@@ -69,12 +69,16 @@
 			width: 70%;
 		} */
 		#image img {
-			width: 80%;
-			height: 50%;
+			width: 700px;
+			height: 400px;
 			border-radius: 10%;
 		}
 		#image {
 			text-align: center;
+		}
+		#title {
+			font-size: 1.5em;
+			font-weight: bold;
 		}
 		#left {
 			padding: 2%;
@@ -116,8 +120,10 @@
 			font-size: 0.3em;
 			width: 20px;
 		}
-		#container {
-
+		#content {
+			padding: 2%;
+			background-color: papayawhip;
+			border-radius: 10%;
 		}
 
 input.rounded {
@@ -154,6 +160,7 @@ input.rounded:focus {
 				height: 100%;
 				border-radius: 10%;
 			}
+
 		}
 	</style>
 
@@ -269,13 +276,13 @@ input.rounded:focus {
 	<div id="image"><img src="{{this.urlToImage}}" onerror="this.style.display='none'"></div>
 <br>
 	<div id="content">
-	  <div>{{this.title}}</div>
-	  <div>{{this.description}}</div>
-	  <div><a href="{{this.url}}">Read More</a></div>
+	  <div id="title">{{this.title}}</div>
+	  <div id="desc">{{this.description}}</div>
 
-		<div>{{this.content}}</div>
+		<div id="cont">{{this.content}}</div>
+		<div><a href="{{this.url}}">Read More</a></div>
 	</div>
-		
+
 	</div>
 
 	</div>
